@@ -26,9 +26,14 @@
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+
   /* Size */
   --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
+
 /* Universal tags */
 * {
   box-sizing: border-box;
@@ -154,4 +159,75 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
+}
+
+/* section common */
+
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+.major__icon {
+  color: var(--color-blue);
+  font-size: 70px;
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  margin: auto;
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.major__icon {
+  transform: all var(--animation-duration) ease;
+}
+
+.major__icon:hover i {
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1.1);
+}
+
+.major__title,
+.major__description {
+  color: dark var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-small);
+}
+
+.job {
+  display: flex;
+  align-items: center;
+}
+
+.job__description {
+  margin: 0 16px;
+  text-align: left;
+}
+
+.jop__name,
+.jop__period {
+  color: var(--color-light-grey);
+}
+
+.jop__name {
+  font-size: front var(--font-small);
+}
+
+.jop__logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
 }
